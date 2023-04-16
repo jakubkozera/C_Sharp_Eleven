@@ -1,24 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Numerics;
 
-int[] ints = new int[] { 1, 3, 4 };
 
-var sum = AddAllInts(ints);
+Test<TestCommand>();
 
-int AddAllInts(int[] values)
+void Test<T>() where T : ICommand
 {
-    int result = 0;
-
-    foreach (var value in values)
-        result += value;
-    return result;
+    Console.WriteLine(nameof(T));
 }
 
-T AddAll<T>(T[] values) where T : INumber<T>
+interface ICommand
 {
-    T result = T.AdditiveIdentity;
 
-    foreach (var value in values)
-        result += value;
-    return result;
 }
+
+public class TestCommand : ICommand { }

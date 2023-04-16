@@ -14,6 +14,21 @@ namespace FileScoped
 
         public int CalculateSalary()
         { 
+            var newCalculator = new Calculator();
+            return newCalculator.Calculate(this);
         }
     } 
+
+    file class Calculator
+    {
+        public int Calculate(Person person)
+        {
+            return 100;
+        }
+    }
+
+    file enum Test
+    {
+        None = 0,
+    }
 }

@@ -7,7 +7,7 @@ Console.WriteLine("Hello, World!");
 var person = new Person()
 {
     Name = "Jakub",
-    Score = 10
+    Score = 1
 };
 
 Validate(person);
